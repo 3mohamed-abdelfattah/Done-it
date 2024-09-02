@@ -1,11 +1,12 @@
-import { Fragment } from "react"
-import Router from "@/router"
+import { TaskProvider } from "./context/TaskContext"
+import { MainPage } from "./pages/main/MainPage"
+
 
 function App() {
   return (
-    <Fragment>
-      <Router />
-    </Fragment>
+    <TaskProvider>
+      <MainPage />
+    </TaskProvider>
   )
 }
 
