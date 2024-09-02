@@ -1,5 +1,5 @@
-import { TaskProvider } from "./context/TaskContext"
-import { MainPage } from "./pages/main/MainPage"
+import { TaskProvider } from "@/context/TaskContext"
+import { MainPage } from "@/pages/main/MainPage"
 
 
 function App() {

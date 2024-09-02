@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useTasks } from "../../context/TaskContext";
-import { AddIcon, DeleteIcon, HeaderLogo } from "../../utils/icon.util"
-import { useAddTask } from "../../utils/useAddTask";
+import { useTasks } from "@/context/TaskContext";
+import { AddIcon, DeleteIcon, HeaderLogo } from "@/utils/icon.util"
+import { useAddTask } from "@/utils/useAddTask";
 
 export const MainPage = () => {
     const { tasks, dispatch } = useTasks();
@@ -13,6 +13,10 @@ export const MainPage = () => {
             addTask(taskText);
             setTaskText('');
         }
+    };
+
+    const handleDeleteTask = (id) => {
+        dispatch({ type: 'DELETE_TASK', payload: id });
     };
 
     const toggleTaskDone = (id) => {
@@ -29,7 +33,7 @@ export const MainPage = () => {
                     do
                 </p>
                 {/* SearchBar */}
-                <div className="flex absolute -bottom-3 gap-2 w-[763px]">
+                <div className="flex absolute -bottom-7 gap-2 w-[763px]">
                     <input
                         className='text-base font-normal text-[#808080] bg-[#262626] p-4 rounded-lg border border-[#0D0D0D] w-full' type="text"
                         value={taskText}
@@ -48,16 +52,17 @@ export const MainPage = () => {
                 </div>
             </header>
 
-
             <main className="mt-16 w-[763px] items-center">
                 <div className="flex justify-between">
                     <div className="flex gap-2 items-center justify-center">
                         <span className="text-secondary text-sm font-bold">Tasks</span>
-                        <span className="py-[2px] px-2 bg-[#333333] w-6 h-5 text-xs font-bold rounded-xl"> 3</span>
+                        <span className="py-[2px] px-2 bg-[#333333] w-6 h-5 text-xs font-bold rounded-xl">{tasks.length}</span>
                     </div>
                     <div className="flex gap-2 items-center justify-center">
                         <span className="text-[#8284FA] text-sm font-bold">Done</span>
-                        <span className="py-[2px] px-2 bg-[#333333] w-12 h-5 text-xs font-bold rounded-xl"> 2 of 5</span>
+                        <span className="py-[2px] px-2 bg-[#333333] w-fit h-5 text-xs font-bold rounded-xl">
+                            {tasks.filter(task => task.done).length} of {tasks.length}
+                        </span>
                     </div>
                 </div>
                 <section className="mt-6">
@@ -72,14 +77,15 @@ export const MainPage = () => {
                                         type="checkbox"
                                         checked={task.done}
                                         onChange={() => toggleTaskDone(task.id)}
-                                        className="checked"
                                     />
                                     <span
-                                        className="text-sm"
+                                        className={`text-sm ${task.done ? 'line-through text-[#808080]' : ''}`}
                                         dangerouslySetInnerHTML={{ __html: task.text }}
                                     />
                                 </div>
-                                <DeleteIcon />
+                                <span className='cursor-pointer text-[#808080] hover:text-red-600' onClick={() => handleDeleteTask(task.id)} >
+                                    <DeleteIcon />
+                                </span>
                             </div>
                         </div>
                     ))}

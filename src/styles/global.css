@@ -19,6 +19,37 @@ html {
   width: 0px;
 }
 
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 17.45px;
+  height: 17.45px;
+  border-radius: 50%;
+  border: 2px solid #4EA8DE;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5E60CE;
+  border-color: #5E60CE;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin: auto;
+  position: relative;
+  top: -2px;
+}
+
 /* * {
   outline: 1px solid yellowgreen;
 } */

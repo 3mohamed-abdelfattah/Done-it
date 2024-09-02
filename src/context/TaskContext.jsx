@@ -10,12 +10,15 @@ const taskReducer = (state, action) => {
             return state.map(task =>
                 task.id === action.payload ? { ...task, done: !task.done } : task
             );
+        case 'DELETE_TASK':
+            return state.filter(task => task.id !== action.payload);
         case 'LOAD_TASKS':
             return action.payload || [];
         default:
             return state;
     }
 };
+
 
 export const TaskProvider = ({ children }) => {
     const [tasks, dispatch] = useReducer(taskReducer, []);
