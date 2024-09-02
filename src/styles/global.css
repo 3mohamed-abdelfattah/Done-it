@@ -1,8 +1,11 @@
+@import url("./_fonts.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
+  @apply font-inter font-normal bg-background text-primary;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,4 +17,8 @@ html {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+* {
+  outline: 1px solid yellowgreen;
 }
