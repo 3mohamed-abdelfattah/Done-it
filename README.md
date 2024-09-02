@@ -1,55 +1,65 @@
-# Done it
+# Done it - To-Do App
 
-**Done it** is a simple and efficient To-Do application that helps users manage their tasks with ease. The app includes features such as creating new tasks, marking them as done, and automatically extracting and wrapping any links found in the task descriptions with `<a>` tags. The project is built using React, leveraging the Context API for state management, Custom Hooks for encapsulating logic, and LocalStorage for persisting tasks.
+**Done it** is a simple and efficient To-Do App designed to help you manage your tasks effectively. Built with React [Vite], Context API, and Tailwind CSS, this app allows you to create tasks, mark them as done, and delete them. It also includes a task counter and saves your tasks in the browser's LocalStorage so that your tasks are preserved between sessions.
 
 ## Features
 
-- **Create a New Task:**
-  - Users can add new tasks with descriptions.
-  - If the task description contains any URLs, they will be automatically wrapped in an `<a>` tag.
+- **Add New Tasks:** Create tasks with a simple input field.
+- **Mark as Done:** Easily mark tasks as completed, which applies a strikethrough style and changes the color.
+- **Delete Tasks:** Remove tasks that you no longer need.
+- **Task Counters:** Display the total number of tasks and the count of completed tasks.
+- **Persistent Storage:** Your tasks are saved in LocalStorage, so they remain even after refreshing the page.
+- **Link Detection:** Automatically detects URLs in your tasks and wraps them with `<a>` tags.
 
-- **Mark Task as Done:**
-  - Users can mark tasks as done, which updates their status visually.
+ ## Screenshots
 
-- **Extract and Wrap Links:**
-  - The app scans the task descriptions for URLs and automatically wraps them in `<a>` tags for easy access.
+ <table align="center">
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d2048b5f-d961-4225-b6a0-fe811d878187" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4790517e-c484-4351-a984-4191af00b6d1" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
+  </tr>
+</table>
 
-- **Persist Data with LocalStorage:**
-  - Tasks are saved in LocalStorage, ensuring that they persist even after the page is refreshed.
+## How to Use
 
-## Technical Implementation
-
-- **Context API:** Used for managing the global state of tasks across the application.
-- **Custom Hooks:**
-  - A custom hook for handling task operations such as adding, marking as done, and extracting links.
-  - Another custom hook for interacting with LocalStorage to save and retrieve tasks.
-- **LocalStorage:** All tasks are stored in the browser’s LocalStorage, ensuring that data is retained between sessions.
+1. **Add a Task:** Enter your task description in the input field and press "Add" or hit Enter.
+2. **Mark as Done:** Click on the checkbox next to a task to mark it as completed.
+3. **Delete a Task:** Click on the delete icon next to a task to remove it.
+4. **View Counters:** Check the counters at the top to see how many tasks you have and how many are completed.
 
 ## Installation
 
-1. **Clone the Repository:**
+To run this project locally, follow these steps:
 
-   ```bash
-   git clone https://github.com/3mohamed-abdelfattah/Done-it.git
-   ```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/3mohamed-abdelfattah/Done-it.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Done-it
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
 
-2. **Navigate to the Project Directory:**
+## Built With
 
-   ```bash
-   cd Done-it
-   ```
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Context API](https://reactjs.org/docs/context.html) - For state management.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom user interfaces.
 
-3. **Install Dependencies:**
+## Contributing
 
-   ```bash
-   npm install
-   ```
+Contributions are welcome! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
 
+---
 
-4. **Run the Application:**
-
-   ```bash
-   npm run dev
-   ```
-
-   CTRL+O to open in your browser
+*Done it - Because every task done deserves a celebration!*
