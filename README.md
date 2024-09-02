@@ -30,13 +30,13 @@
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/3mohamed-abdelfattah/todo.git
+   git clone https://github.com/3mohamed-abdelfattah/Done-it.git
    ```
 
 2. **Navigate to the Project Directory:**
 
    ```bash
-   cd todo
+   cd Done-it
    ```
 
 3. **Install Dependencies:**
