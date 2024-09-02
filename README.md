@@ -18,7 +18,7 @@
     <td><img src="https://github.com/user-attachments/assets/d2048b5f-d961-4225-b6a0-fe811d878187" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/4790517e-c484-4351-a984-4191af00b6d1" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
+    <td><img width='350px' src="https://github.com/user-attachments/assets/4790517e-c484-4351-a984-4191af00b6d1" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
   </tr>
 </table>
 
