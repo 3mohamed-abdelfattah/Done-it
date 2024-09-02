@@ -68,32 +68,39 @@ export const MainPage = () => {
 
                 {/* Tasks */}
                 <section className="mt-6">
-                    {tasks.map(task => (
-                        <div
-                            key={task.id}
-                            className={`task ${task.done ? 'done' : ''} bg-[#262626] border border-[#333333] p-4 rounded-lg mb-3`}
-                        >
-                            <div className="flex gap-3 justify-between">
-                                <div className="flex gap-3">
-                                    <span>
+                    {tasks.length === 0 ? (
+                        <h1 style={{ textAlign: 'center' }}>No tasks to display</h1>
+                    ) : (
+                        tasks.map(task => (
+                            <div
+                                key={task.id}
+                                className={`task ${task.done ? 'done' : ''} bg-[#262626] border border-[#333333] p-4 rounded-lg mb-3`}
+                            >
+                                <div className="flex gap-3 justify-between">
+                                    <div className="flex gap-3">
                                         <input
                                             type="checkbox"
                                             checked={task.done}
                                             onChange={() => toggleTaskDone(task.id)}
+                                            className="custom-checkbox"
                                         />
-                                    </span>
+                                        <span
+                                            className={`text-sm ${task.done ? 'line-through text-[#808080]' : ''}`}
+                                            dangerouslySetInnerHTML={{ __html: task.text }}
+                                        />
+                                    </div>
                                     <span
-                                        className={`text-sm ${task.done ? 'line-through text-[#808080]' : ''}`}
-                                        dangerouslySetInnerHTML={{ __html: task.text }}
-                                    />
+                                        className='cursor-pointer text-[#808080] hover:text-red-600'
+                                        onClick={() => handleDeleteTask(task.id)}
+                                    >
+                                        <DeleteIcon />
+                                    </span>
                                 </div>
-                                <span className='cursor-pointer text-[#808080] hover:text-red-600' onClick={() => handleDeleteTask(task.id)} >
-                                    <DeleteIcon />
-                                </span>
                             </div>
-                        </div>
-                    ))}
+                        ))
+                    )}
                 </section>
+
 
             </main>
         </div>
