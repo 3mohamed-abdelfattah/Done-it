@@ -12,13 +12,14 @@
 - **Link Detection:** Automatically detects URLs in your tasks and wraps them with `<a>` tags.
 
  ## Screenshots
-
  <table align="center">
   <tr>
+    <td><img src="https://github.com/user-attachments/assets/61f0c4ff-03c5-4906-b8a2-86141c1941d9" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
     <td><img src="https://github.com/user-attachments/assets/d2048b5f-d961-4225-b6a0-fe811d878187" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
   </tr>
-  <tr>
-    <td><img width='350px' src="https://github.com/user-attachments/assets/4790517e-c484-4351-a984-4191af00b6d1" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
+  <tr align='center'>
+    <td><img width='320px' src="https://github.com/user-attachments/assets/36141781-aa21-4323-a034-5abd1b354b7e" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
+    <td><img width='320px' src="https://github.com/user-attachments/assets/4790517e-c484-4351-a984-4191af00b6d1" alt="Image"  style="border: 5px solid #92E3A9;"/></td>
   </tr>
 </table>
 
