@@ -50,6 +50,10 @@ input[type="checkbox"]:checked::before {
   top: -2px;
 }
 
-/* * {
+a {
+  color: #5E60CE;
+}
+
+* {
   outline: 1px solid yellowgreen;
-} */
+}

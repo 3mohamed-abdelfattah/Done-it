@@ -33,7 +33,7 @@ export const MainPage = () => {
                     do
                 </p>
                 {/* SearchBar */}
-                <div className="flex absolute -bottom-7 gap-2 w-[763px]">
+                <div className="flex absolute -bottom-7 gap-2 w-11/12 md:w-[763px]">
                     <input
                         className='text-base font-normal text-[#808080] bg-[#262626] p-4 rounded-lg border border-[#0D0D0D] w-full' type="text"
                         value={taskText}
@@ -52,7 +52,7 @@ export const MainPage = () => {
                 </div>
             </header>
 
-            <main className="mt-16 w-[763px] items-center">
+            <main className="mt-16 w-11/12 md:w-[763px] items-center">
                 <div className="flex justify-between">
                     <div className="flex gap-2 items-center justify-center">
                         <span className="text-secondary text-sm font-bold">Tasks</span>
@@ -65,6 +65,8 @@ export const MainPage = () => {
                         </span>
                     </div>
                 </div>
+
+                {/* Tasks */}
                 <section className="mt-6">
                     {tasks.map(task => (
                         <div
@@ -73,11 +75,13 @@ export const MainPage = () => {
                         >
                             <div className="flex gap-3 justify-between">
                                 <div className="flex gap-3">
-                                    <input
-                                        type="checkbox"
-                                        checked={task.done}
-                                        onChange={() => toggleTaskDone(task.id)}
-                                    />
+                                    <span>
+                                        <input
+                                            type="checkbox"
+                                            checked={task.done}
+                                            onChange={() => toggleTaskDone(task.id)}
+                                        />
+                                    </span>
                                     <span
                                         className={`text-sm ${task.done ? 'line-through text-[#808080]' : ''}`}
                                         dangerouslySetInnerHTML={{ __html: task.text }}
@@ -90,6 +94,7 @@ export const MainPage = () => {
                         </div>
                     ))}
                 </section>
+
             </main>
         </div>
     )

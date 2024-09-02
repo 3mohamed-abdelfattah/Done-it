@@ -13,7 +13,10 @@ export default {
                 primary: "#F2F2F2",
                 secondary: "#4EA8DE",
                 background: "#1A1A1A",
-            }
+            },
+            screens: {
+                'md': '800px',
+            },
         },
     },
     plugins: [],
