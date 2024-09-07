@@ -1,11 +1,14 @@
 import { TaskProvider } from "@/context/TaskContext"
 import { MainPage } from "@/pages/main/MainPage"
+import Router from "./router"
 
 function App() {
 
   return (
     <TaskProvider>
-      <MainPage />
+      <Router>
+        <MainPage />
+      </Router>
     </TaskProvider>
   )
 }
